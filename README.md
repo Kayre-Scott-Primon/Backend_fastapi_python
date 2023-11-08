@@ -1,4 +1,6 @@
-﻿# Módulo Introdutório > Desenvolvimento Backend > Aula 2
+﻿# MBA Engenharia de Software USP
+
+# Módulo Introdutório > Desenvolvimento Backend > Aula 2
 
 ## Ambiente Python para desenvolvimento
 
@@ -43,12 +45,13 @@ Aqui estão as instruções para instalar o Visual Studio Code (VSCode) em difer
 1. A forma mais simples de instalar o Visual Studio Code em distribuições Debian/Ubuntu é baixar e instalar o pacote .deb (64 bits)
    [Debian ou Ubunto](https://code.visualstudio.com/download). Caso utilize outra distribuição, [neste link você encontra a documentação oficial com as explicações e passo a passo da instalação](https://code.visualstudio.com/docs/setup/linux).
 
-## Rodando a API Produtos utilizando o framework Django
 
-Acessar o diretório django-produtos
+## Rodando a API Produtos utilizando o framework FastAPI
+
+Acessar o diretório fastapi-produtos
 
 ```
-cd /referencial/src/django-produtos
+cd /referencial/src/fastapi-produtos
 ```
 
 Criar o ambiente virtual
@@ -68,68 +71,16 @@ Para windows
 . venv/bin/activate
 ```
 
-Instalar o Django
+Para instalar os pacotes necessários para rodar o servidor FastAPI
 
 ```
-pip install django
+pip install fastapi uvicorn
 ```
 
 Criar um arquivo txt com as dependências do projeto
 
 ```
 pip freeze > requirements.txt
-```
-
-Para executar o servidor Django
-
-```
-python manage.py runserver 0.0.0.0:8000
-```
-
-Para criar um app no Django - cada grupo
-
-```
-python  manage.py startapp produto
-```
-
-Criar a migração dos modelos Django no banco de dados
-
-```
-python manage.py makemigrations
-```
-
-```
-python manage.py migrate
-```
-
-Criar um super usuário para o Django Admin
-
-```
-python manage.py createsuperuser
-```
-
-Para acessar no Windows
-```
-localhost:8000
-```
-
-Para acessar os dados
-```
-localhost:8000/admin
-```
-
-## Rodando a API Produtos utilizando o framework FastAPI
-
-Acessar o diretório fastapi-produtos
-
-```
-cd /referencial/src/fastapi-produtos
-```
-
-Para instalar os pacotes necessários para rodar o servidor FastAPI
-
-```
-pip install fastapi uvicorn
 ```
 
 Para executar o servidor FastAPI
